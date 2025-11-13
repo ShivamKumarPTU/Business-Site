@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shivam Kumar — Freelance Android Developer</title>
+  <meta name="description" content="Shivam Kumar — Fast, affordable Android apps. Kotlin, Jetpack Compose, Firebase. Contact for pricing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <style>
+    :root{
+      --navy:#0F172A;
+      --cyan:#00ADB5;
+      --muted:#64748B;
+      --bg:#F8FAFC;
+      --card:#FFFFFF;
+      --radius:14px;
+      --container:1200px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:'Inter',sans-serif;color:var(--navy);background:var(--bg);-webkit-font-smoothing:antialiased;
+      line-height:1.5;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{max-width:var(--container);margin:0 auto;padding:0 22px}
+    header{
+      position:fixed;left:0;right:0;top:0;background:rgba(255,255,255,0.98);backdrop-filter:saturate(120%) blur(4px);
+      box-shadow:0 6px 18px rgba(10,15,30,0.04);z-index:1200;padding:14px 0;
+    }
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:var(--navy)}
+    .logo span{color:var(--cyan)}
+    .nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .nav-links a{font-weight:500;color:var(--navy);padding:8px 10px;border-radius:8px}
+    .nav-links a:hover{color:var(--cyan);background:rgba(0,173,181,0.06)}
+    .mobile-toggle{display:none;font-size:20px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:600;cursor:pointer;border:none}
+    .btn-primary{background:var(--cyan);color:white}
+    .btn-ghost{background:transparent;border:2px solid var(--cyan);color:var(--navy)}
+    section{padding:90px 0}
+    /* HERO */
+    .hero{padding-top:140px}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center}
+    .hero-title{font-family:'Poppins',sans-serif;font-size:2.4rem;line-height:1.05;margin-bottom:16px}
+    .hero-sub{color:var(--muted);margin-bottom:22px;font-size:1.05rem}
+    .highlights{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .chip{background:var(--card);padding:10px 14px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.04);font-weight:600;color:var(--navy)}
+    /* mockup */
+    .mockup{display:flex;justify-content:center;align-items:center}
+    .phone{width:280px;height:520px;border-radius:36px;background:linear-gradient(180deg,#0f172a,#0b1220);box-shadow:0 30px 80px rgba(15,23,42,0.12);display:flex;align-items:center;justify-content:center}
+    .phone-screen{width:230px;height:470px;border-radius:28px;background:#fff;display:grid;place-items:center;padding:18px}
+    .mock-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:100%}
+    .mock-icon{background:var(--cyan);border-radius:10px;padding:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px}
+    /* trust */
+    .trust-row{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+    .trust-badge{background:var(--card);padding:10px 14px;border-radius:12px;display:flex;gap:12px;align-items:center;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    /* services */
+    .section-header{text-align:center;margin-bottom:40px}
+    .section-header h2{font-size:1.8rem;margin-bottom:8px}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .service{background:var(--card);padding:22px;border-radius:16px;box-shadow:0 10px 30px rgba(15,23,42,0.04);transition:transform .28s}
+    .service:hover{transform:translateY(-8px)}
+    .service .icon{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),#009199);color:white;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
+    .service h3{margin:0 0 8px 0;font-size:1.1rem}
+    .service p{color:var(--muted);margin:0 0 12px}
+    .service .cta{font-weight:600;color:var(--cyan)}
+    /* CTA / pricing */
+    .pricing-cta{display:flex;gap:18px;align-items:center;justify-content:center;margin-top:26px;flex-wrap:wrap}
+    .pricing-card{background:linear-gradient(180deg,#fff,#fbfdfe);padding:18px;border-radius:12px;border:1px solid rgba(0,173,181,0.06);box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    /* FAQ */
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .faq{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 22px rgba(15,23,42,0.04)}
+    .faq h4{margin:0 0 8px 0}
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
+    .form-control{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #e6edf2;background:#fff;font-size:0.95rem}
+    label{display:block;margin-bottom:8px;font-weight:600}
+    .success-message{background:#16a34a;color:#fff;padding:12px;border-radius:10px;display:none;margin-top:12px}
+    /* footer */
+    footer{background:var(--navy);color:#fff;padding:40px 0;border-top:4px solid rgba(255,255,255,0.03)}
+    .footer-grid{display:flex;gap:40px;flex-wrap:wrap;justify-content:space-between}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.06);margin-right:8px;color:#fff}
+    /* responsiveness */
+    @media(max-width:1000px){.hero-grid{grid-template-columns:1fr;}.contact-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}}
+    @media(max-width:720px){.nav-links{display:none}.mobile-toggle{display:block}.mockup{display:none}.hero-title{font-size:1.6rem;padding-right:0}}
+  </style>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Shivam<span>.</span></div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#tech-stack">Tech</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a class="btn btn-ghost" href="#contact">Request Quote</a>
+          <div class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
+              <span class="chip">Fast delivery • Clean UI • Affordable</span>
+              <span style="color:var(--muted);font-size:0.95rem">Kotlin • Firebase • Jetpack Compose</span>
+            </div>
+
+            <h1 class="hero-title">I build fast, reliable Android apps that grow your business.</h1>
+            <p class="hero-sub">I'm Shivam — freelance Android developer. I help businesses and entrepreneurs launch production-ready Android apps quickly using Kotlin, Jetpack, and Firebase.</p>
+
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <a class="btn btn-primary" href="#contact"><i class="fas fa-paper-plane"></i>Request a Quote</a>
+              <a class="btn" href="#portfolio" style="border-radius:999px;border:1px solid rgba(15,23,42,0.05);">View Work</a>
+            </div>
+
+            <div class="trust-row" aria-hidden="true">
+              <div class="trust-badge"><i class="fas fa-shipping-fast" style="color:var(--cyan)"></i><div style="font-size:0.95rem">Fast delivery</div></div>
+              <div class="trust-badge"><i class="fas fa-paint-brush" style="color:var(--cyan)"></i><div style="font-size:0.95rem">Clean UI</div></div>
+              <div class="trust-badge"><i class="fas fa-coins" style="color:var(--cyan)"></i><div style="font-size:0.95rem">Affordable</div></div>
+              <div class="trust-badge"><i class="fas fa-comments" style="color:var(--cyan)"></i><div style="font-size:0.95rem">Clear communication</div></div>
+            </div>
+
+            <div style="margin-top:18px;color:var(--muted);font-size:0.95rem">
+              <strong>Typical project:</strong> MVP app with authentication, basic CRUD, and push notifications — ready to ship in 2–6 weeks depending on scope.
+            </div>
+          </div>
+
+          <div class="mockup" aria-hidden="true">
+            <div class="phone">
+              <div class="phone-screen">
+                <div class="mock-icons">
+                  <div class="mock-icon"><i class="fas fa-dumbbell"></i></div>
+                  <div class="mock-icon"><i class="fas fa-tasks"></i></div>
+                  <div class="mock-icon"><i class="fas fa-map-marked-alt"></i></div>
+                  <div class="mock-icon"><i class="fas fa-chart-line"></i></div>
+                  <div class="mock-icon"><i class="fas fa-calendar"></i></div>
+                  <div class="mock-icon"><i class="fas fa-music"></i></div>
+                  <div class="mock-icon"><i class="fas fa-camera"></i></div>
+                  <div class="mock-icon"><i class="fas fa-wallet"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- services -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Services I Offer</h2>
+          <p style="color:var(--muted)">Designed for startups, small businesses, and entrepreneurs who need reliable Android apps — fast.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service">
+            <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Custom Android App Development</h3>
+            <p>Turn idea → product. End-to-end Kotlin apps, Material UI, architecture (MVVM), modular code and tests.</p>
+            <a class="cta" href="#contact">Request Quote →</a>
+          </div>
+
+          <div class="service">
+            <div class="icon"><i class="fas fa-fire"></i></div>
+            <h3>Firebase Integration & Backend</h3>
+            <p>Auth, Firestore/Realtime DB, Storage, Cloud Functions & messaging (FCM). I build secure, scalable backends.</p>
+            <a class="cta" href="#contact">Request Quote →</a>
+          </div>
+
+          <div class="service">
+            <div class="icon"><i class="fas fa-tools"></i></div>
+            <h3>Maintenance & Performance</h3>
+            <p>Bug fixes, upgrades, performance tuning, Play Store publishing and release management.</p>
+            <a class="cta" href="#contact">Request Quote →</a>
+          </div>
+        </div>
+
+        <div class="pricing-cta">
+          <div class="pricing-card">
+            <strong>Pricing:</strong>
+            <div style="color:var(--muted);margin-top:6px">I offer custom quotes — tell me your scope and I'll return a clear, affordable proposal.</div>
+            <div style="margin-top:10px"><a class="btn btn-primary" href="#contact">Contact for Pricing</a></div>
+          </div>
+
+          <div class="pricing-card" style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-weight:700">Want a fast MVP?</div>
+            <div style="color:var(--muted)">I can build a launch-ready MVP within 4–6 weeks depending on scope.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- tech stack (keeps succinct for business site) -->
+    <section id="tech-stack" class="tech-stack">
+      <div class="container">
+        <div class="section-header">
+          <h2>Technologies I Work With</h2>
+          <p style="color:var(--muted)">Focused on Android-first tools that launch reliable apps quickly.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+          <div class="pricing-card" style="text-align:left">
+            <strong>Android</strong>
+            <div style="color:var(--muted);margin-top:8px">Kotlin · Jetpack Compose · MVVM · Room · Jetpack libraries</div>
+          </div>
+          <div class="pricing-card" style="text-align:left">
+            <strong>Backend & APIs</strong>
+            <div style="color:var(--muted);margin-top:8px">Firebase Auth · Firestore · REST · Retrofit · FCM</div>
+          </div>
+          <div class="pricing-card" style="text-align:left">
+            <strong>Tools</strong>
+            <div style="color:var(--muted);margin-top:8px">Android Studio · GitHub · Postman · Figma</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2>Selected Projects</h2>
+          <p style="color:var(--muted)">Real projects I shipped — click to view case study or live demo.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
+          <div class="service" onclick="window.open('https://shivamkumarptu.github.io/GymSaathi-Landing-Page/','_blank')" style="cursor:pointer">
+            <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
+              <div class="icon"><i class="fas fa-dumbbell"></i></div>
+              <div>
+                <h3 style="margin:0">GymSaathi App</h3>
+                <div style="color:var(--muted);font-size:0.95rem">Fitness app — Auth, biometric, tracking & analytics.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service" onclick="window.open('https://shivamkumarptu.github.io/Full-Screen-TImer-Landing-Page/','_blank')" style="cursor:pointer">
+            <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
+              <div class="icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <h3 style="margin:0">Full Screen Timer</h3>
+                <div style="color:var(--muted);font-size:0.95rem">Distraction-free timer with multiple modes & persistence.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:20px">
+          <a class="btn" href="#contact">Discuss Project — Request Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonials & trust -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header"><h2>What clients say</h2></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+          <div class="service">
+            <p style="font-style:italic;color:var(--muted)">"Delivered exactly what we needed on time — excellent communication throughout."</p>
+            <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
+              <div style="width:44px;height:44px;border-radius:10px;background:var(--cyan);color:#fff;display:grid;place-items:center">RM</div>
+              <div>
+                <strong>Rahul Mehta</strong><div style="color:var(--muted);font-size:0.9rem">Founder, FitStart</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service">
+            <p style="font-style:italic;color:var(--muted)">"Smooth Firebase integration and fast fixes. Highly recommended."</p>
+            <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
+              <div style="width:44px;height:44px;border-radius:10px;background:var(--cyan);color:#fff;display:grid;place-items:center">AS</div>
+              <div>
+                <strong>Ananya Sharma</strong><div style="color:var(--muted);font-size:0.9rem">Product Manager</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header"><h2>Frequently Asked</h2><p style="color:var(--muted)">Short answers to help you decide faster.</p></div>
+        <div class="faq-grid">
+          <div class="faq">
+            <h4>How long does a typical app take?</h4>
+            <p style="color:var(--muted)">An MVP typically takes 4–8 weeks depending on complexity. I provide timelines with every quote.</p>
+          </div>
+          <div class="faq">
+            <h4>Do you provide ongoing maintenance?</h4>
+            <p style="color:var(--muted)">Yes — bug fixes, Play Store updates, performance improvements & feature add-ons available by agreement.</p>
+          </div>
+          <div class="faq">
+            <h4>How do you price projects?</h4>
+            <p style="color:var(--muted)">I quote per project based on scope. Use the contact form to share requirements and I’ll return a clear estimate.</p>
+          </div>
+          <div class="faq">
+            <h4>Do you sign NDAs?</h4>
+            <p style="color:var(--muted)">Yes — I can sign NDAs and deliver private repositories on request.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header"><h2>Let's talk about your app</h2><p style="color:var(--muted)">Quick answers and honest pricing. Tell me about your idea — I’ll reply in 24 hours.</p></div>
+
+        <div class="contact-grid">
+          <div>
+            <form id="contactForm">
+              <div class="form-group" style="margin-bottom:12px">
+                <label for="name">Your name</label>
+                <input id="name" name="name" class="form-control form-control" required placeholder="e.g. Priya Sharma" />
+              </div>
+
+              <div class="form-group" style="margin-bottom:12px">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" class="form-control" required placeholder="you@company.com" />
+              </div>
+
+              <div class="form-group" style="margin-bottom:12px">
+                <label for="projectType">Project type</label>
+                <select id="projectType" name="project_type" class="form-control" required>
+                  <option value="">Select</option>
+                  <option value="app-development">App Development</option>
+                  <option value="maintenance">Maintenance</option>
+                  <option value="firebase">Firebase Setup</option>
+                  <option value="consultation">Consultation</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom:12px">
+                <label for="budget">Estimated budget (optional)</label>
+                <select id="budget" name="budget_range" class="form-control">
+                  <option value="">Prefer not to say</option>
+                  <option value="under-500">$<50</option>
+                  <option value="500-1500">$50–$150</option>
+                  <option value="1500-5000">$150–$500</option>
+                  <option value="5000-plus">$500+</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom:12px">
+                <label for="message">Brief description</label>
+                <textarea id="message" name="message" rows="5" class="form-control" placeholder="What do you want built? (scope, platform, deadline)" required></textarea>
+              </div>
+
+              <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i> Send request</button>
+              <div id="successMessage" class="success-message">Thanks — I will respond within 24 hours.</div>
+            </form>
+          </div>
+
+          <aside style="padding:22px;background:var(--card);border-radius:12px;box-shadow:0 10px 30px rgba(15,23,42,0.04)">
+            <h3 style="margin-top:0">Prefer to chat?</h3>
+            <p style="color:var(--muted)">Message me on WhatsApp for quick quotes or schedule a call.</p>
+
+            <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px">
+              <a class="btn btn-primary" href="https://wa.me/916204081315?text=Hi%20Shivam%2C%20I%20want%20a%20quote" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+              <a class="btn" href="mailto:shivamranapoari@gmail.com"><i class="fas fa-envelope"></i> Email me</a>
+            </div>
+
+            <div style="margin-top:18px;border-top:1px dashed rgba(15,23,42,0.06);padding-top:12px">
+              <strong>Quick facts</strong>
+              <ul style="color:var(--muted);margin-top:10px;padding-left:18px">
+                <li>24-hour initial reply on quotes</li>
+                <li>Affordable student-friendly rates</li>
+                <li>Source control & Play Store publishing included</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="color:#fff">Shivam<span>.</span></div>
+          <div style="color:rgba(255,255,255,0.75);margin-top:8px">Freelance Android Developer — Kotlin & Firebase</div>
+        </div>
+
+        <div style="display:flex;gap:30px;flex-wrap:wrap">
+          <div>
+            <h4 style="color:#fff;margin-bottom:8px">Links</h4>
+            <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,0.85)">
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="color:#fff;margin-bottom:8px">Contact</h4>
+            <div style="color:rgba(255,255,255,0.85)">shivamranapoari@gmail.com</div>
+            <div style="color:rgba(255,255,255,0.85);margin-top:6px">+91 62040 81315</div>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="color:#fff;margin-bottom:8px">Social</h4>
+          <div class="socials">
+            <a class="social-link" href="https://github.com/shivamkumarptu" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="social-link" href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:22px;color:rgba(255,255,255,0.6)">© 2025 Shivam Kumar — Built with ❤️ using Kotlin & Firebase</div>
+    </div>
+  </footer>
+
+  <!-- scripts -->
+  <script>
+    // EmailJS init - replace public key if needed
+    (function(){ emailjs.init("_gRJcujBsQGyuWnej"); })();
+
+    // Mobile nav
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle && mobileToggle.addEventListener('click', ()=> navLinks.classList.toggle('active'));
+
+    // Smooth scroll offset for fixed header
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = this.getAttribute('href');
+        if(!target || target === '#') return;
+        const el = document.querySelector(target);
+        if(el){
+          e.preventDefault();
+          const top = el.getBoundingClientRect().top + window.scrollY - 86;
+          window.scrollTo({top, behavior:'smooth'});
+        }
+      });
+    });
+
+    // Contact form submission with EmailJS (uses same service/template from your original)
+    const form = document.getElementById('contactForm');
+    const successBox = document.getElementById('successMessage');
+
+    form && form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const original = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Sending…'; submitBtn.disabled = true;
+
+      // For simplicity we use emailjs.sendForm with original IDs you had. Replace with your service/template IDs if different.
+      emailjs.sendForm('service_i597mpn', 'template_pgfjtcc', this)
+        .then(function(){
+          successBox.style.display = 'block';
+          form.reset();
+          submitBtn.innerHTML = original;
+          submitBtn.disabled = false;
+          setTimeout(()=> successBox.style.display = 'none', 5500);
+        }, function(err){
+          alert('Error sending message — please email me directly.');
+          console.error(err);
+          submitBtn.innerHTML = original;
+          submitBtn.disabled = false;
+        });
+    });
+
+    // Console greeting
+    console.log('Shivam Kumar — Freelance Android Developer — Ready to build apps 🚀');
+  </script>
+</body>
+</html>
