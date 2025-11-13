@@ -49,9 +49,7 @@
     .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center}
     .hero-title{font-family:'Poppins',sans-serif;font-size:2.4rem;line-height:1.05;margin-bottom:16px}
     .hero-sub{color:var(--muted);margin-bottom:22px;font-size:1.05rem}
-    .highlights{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
     .chip{background:var(--card);padding:10px 14px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.04);font-weight:600;color:var(--navy)}
-    /* mockup */
     .mockup{display:flex;justify-content:center;align-items:center}
     .phone{width:280px;height:520px;border-radius:36px;background:linear-gradient(180deg,#0f172a,#0b1220);box-shadow:0 30px 80px rgba(15,23,42,0.12);display:flex;align-items:center;justify-content:center}
     .phone-screen{width:230px;height:470px;border-radius:28px;background:#fff;display:grid;place-items:center;padding:18px}
@@ -86,9 +84,62 @@
     footer{background:var(--navy);color:#fff;padding:40px 0;border-top:4px solid rgba(255,255,255,0.03)}
     .footer-grid{display:flex;gap:40px;flex-wrap:wrap;justify-content:space-between}
     .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.06);margin-right:8px;color:#fff}
+    
+    /* Service Cards Styles */
+    .services{background:var(--off-white)}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+    .service-card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.05);transition:all 0.3s ease}
+    .service-card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,0.1)}
+    .service-icon{height:120px;background:var(--cyan);display:flex;align-items:center;justify-content:center;font-size:40px;color:white}
+    .service-content{padding:30px}
+    .service-content h3{margin-bottom:15px;font-size:1.5rem}
+    .service-content p{margin-bottom:20px;color:var(--muted)}
+    .service-cta{display:inline-block;color:var(--cyan);font-weight:500;text-decoration:none;transition:all 0.3s ease}
+    .service-cta:hover{transform:translateX(5px)}
+    .services-cta{text-align:center;margin-top:50px}
+    
+    /* Tech Stack Cards Styles */
+    .tech-stack{background:white}
+    .tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+    .tech-card{background:var(--off-white);border-radius:15px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,0.05);transition:all 0.3s ease;border:2px solid transparent}
+    .tech-card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,0.1);border-color:var(--cyan)}
+    .tech-card-header{display:flex;align-items:center;gap:15px;margin-bottom:25px}
+    .tech-card-header i{font-size:32px;color:var(--cyan)}
+    .tech-card-header h3{font-size:1.3rem;color:var(--navy);margin:0}
+    .tech-list{list-style:none;padding:0;margin:0}
+    .tech-list li{display:flex;align-items:center;gap:10px;padding:8px 0;color:var(--dark-gray);font-size:0.95rem}
+    .tech-dot{width:8px;height:8px;background:var(--cyan);border-radius:50%;flex-shrink:0}
+    .tech-list li:hover{color:var(--navy);font-weight:500}
+    
+    /* Portfolio Cards Styles */
+    .portfolio{background:white}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+    .portfolio-card{border-radius:16px;overflow:hidden;background:white;box-shadow:0 18px 30px rgba(2,6,23,0.04);transition:transform 0.25s ease,box-shadow 0.25s ease;display:flex;flex-direction:column;cursor:pointer}
+    .portfolio-card:hover{transform:translateY(-6px);box-shadow:0 28px 50px rgba(2,6,23,0.08)}
+    .portfolio-image{height:200px;background:var(--cyan);display:flex;align-items:center;justify-content:center;color:white;font-size:34px;border-top-left-radius:16px;border-top-right-radius:16px}
+    .portfolio-content{padding:28px 26px 32px;flex:1 0 auto}
+    .portfolio-content h3{margin:0 0 8px 0}
+    .portfolio-content p{color:var(--dark-gray);margin-bottom:12px}
+    .portfolio-tech{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+    .project-tag{display:inline-block;background:#f3f7f8;color:var(--navy);padding:8px 12px;border-radius:20px;margin:6px 8px 0 0;font-size:0.88rem}
+    .tech-tag{background:var(--off-white);padding:5px 12px;border-radius:20px;font-size:0.85rem;color:var(--dark-gray)}
+    .portfolio-cta{display:inline-block;color:var(--cyan);font-weight:500;text-decoration:none;margin-top:18px}
+    .view-more{text-align:center;margin-top:50px}
+    
+    /* Testimonials Cards Styles */
+    .testimonials{background:var(--off-white)}
+    .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+    .testimonial-card{background:white;padding:28px 30px;border-radius:16px;box-shadow:0 18px 30px rgba(2,6,23,0.06)}
+    .testimonial-text{font-style:italic;margin-bottom:22px;color:var(--dark-gray);line-height:1.6}
+    .testimonial-author{display:flex;align-items:center;gap:15px}
+    .author-avatar{width:50px;height:50px;background:var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold}
+    .author-info h4{margin-bottom:5px}
+    .author-info p{color:var(--dark-gray);font-size:0.9rem}
+    
     /* responsiveness */
     @media(max-width:1000px){.hero-grid{grid-template-columns:1fr;}.contact-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}}
     @media(max-width:720px){.nav-links{display:none}.mobile-toggle{display:block}.mockup{display:none}.hero-title{font-size:1.6rem;padding-right:0}}
+    @media(max-width:576px){.services-grid{grid-template-columns:1fr}.tech-grid{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:1fr}.testimonial-grid{grid-template-columns:1fr}.tech-card-header{gap:12px}.tech-card-header i{font-size:28px}.tech-card-header h3{font-size:1.1rem}.tech-list li{font-size:0.9rem;padding:6px 0}}
   </style>
 </head>
 <body>
@@ -120,7 +171,6 @@
           <div>
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
               <span class="chip">Fast delivery • Clean UI • Affordable</span>
-              <span style="color:var(--muted);font-size:0.95rem">Kotlin • Firebase • Jetpack Compose</span>
             </div>
 
             <h1 class="hero-title">I build fast, reliable Android apps that grow your business.</h1>
@@ -163,141 +213,238 @@
       </div>
     </section>
 
-    <!-- services -->
+    <!-- Services Section -->
     <section id="services" class="services">
-      <div class="container">
-        <div class="section-header">
-          <h2>Services I Offer</h2>
-          <p style="color:var(--muted)">Designed for startups, small businesses, and entrepreneurs who need reliable Android apps — fast.</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>Services Offered</h2>
+                <p>Comprehensive Android development solutions tailored to your needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Custom Android App Development</h3>
+                        <p>Full-cycle Android app development using Kotlin and Firebase with fast UI and scalable backend.</p>
+                        <a href="#contact" class="service-cta">Get a Quote →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>App Maintenance & Optimization</h3>
+                        <p>Improve app performance, fix bugs, and enhance user experience.</p>
+                        <a href="#contact" class="service-cta">Upgrade My App →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Firebase Integration</h3>
+                        <p>Set up Authentication, Firestore, Analytics, and Push Notifications.</p>
+                        <a href="#contact" class="service-cta">Setup Firebase →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>UI/UX to App Conversion</h3>
+                        <p>Convert your design (Figma/Adobe XD) into a working Kotlin app.</p>
+                        <a href="#contact" class="service-cta">Start My Project →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <a href="#contact" class="btn btn-primary">Let's bring your app idea to life →</a>
+            </div>
         </div>
-
-        <div class="services-grid">
-          <div class="service">
-            <div class="icon"><i class="fas fa-mobile-alt"></i></div>
-            <h3>Custom Android App Development</h3>
-            <p>Turn idea → product. End-to-end Kotlin apps, Material UI, architecture (MVVM), modular code and tests.</p>
-            <a class="cta" href="#contact">Request Quote →</a>
-          </div>
-
-          <div class="service">
-            <div class="icon"><i class="fas fa-fire"></i></div>
-            <h3>Firebase Integration & Backend</h3>
-            <p>Auth, Firestore/Realtime DB, Storage, Cloud Functions & messaging (FCM). I build secure, scalable backends.</p>
-            <a class="cta" href="#contact">Request Quote →</a>
-          </div>
-
-          <div class="service">
-            <div class="icon"><i class="fas fa-tools"></i></div>
-            <h3>Maintenance & Performance</h3>
-            <p>Bug fixes, upgrades, performance tuning, Play Store publishing and release management.</p>
-            <a class="cta" href="#contact">Request Quote →</a>
-          </div>
-        </div>
-
-        <div class="pricing-cta">
-          <div class="pricing-card">
-            <strong>Pricing:</strong>
-            <div style="color:var(--muted);margin-top:6px">I offer custom quotes — tell me your scope and I'll return a clear, affordable proposal.</div>
-            <div style="margin-top:10px"><a class="btn btn-primary" href="#contact">Contact for Pricing</a></div>
-          </div>
-
-          <div class="pricing-card" style="display:flex;flex-direction:column;gap:8px">
-            <div style="font-weight:700">Want a fast MVP?</div>
-            <div style="color:var(--muted)">I can build a launch-ready MVP within 4–6 weeks depending on scope.</div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- tech stack (keeps succinct for business site) -->
+    <!-- Tech Stack Section -->
     <section id="tech-stack" class="tech-stack">
-      <div class="container">
-        <div class="section-header">
-          <h2>Technologies I Work With</h2>
-          <p style="color:var(--muted)">Focused on Android-first tools that launch reliable apps quickly.</p>
+        <div class="container">
+            <div class="section-header">
+                <h2>Technologies I Work With</h2>
+                <p>Cutting-edge tools and frameworks for modern Android development</p>
+            </div>
+            
+            <div class="tech-grid">
+                <!-- Android Development Card -->
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <i class="fab fa-android"></i>
+                        <h3>Android Development</h3>
+                    </div>
+                    <div class="tech-card-content">
+                        <ul class="tech-list">
+                            <li><span class="tech-dot"></span>Kotlin</li>
+                            <li><span class="tech-dot"></span>Java</li>
+                            <li><span class="tech-dot"></span>Jetpack Compose</li>
+                            <li><span class="tech-dot"></span>MVVM Architecture</li>
+                            <li><span class="tech-dot"></span>Room Database</li>
+                            <li><span class="tech-dot"></span>Jetpack Libraries</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Backend & APIs Card -->
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Backend & APIs</h3>
+                    </div>
+                    <div class="tech-card-content">
+                        <ul class="tech-list">
+                            <li><span class="tech-dot"></span>Retrofit</li>
+                            <li><span class="tech-dot"></span>REST APIs</li>
+                            <li><span class="tech-dot"></span>Firebase Authentication</li>
+                            <li><span class="tech-dot"></span>Firestore / Realtime DB</li>
+                            <li><span class="tech-dot"></span>Cloud Messaging (FCM)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Tools & Technologies Card -->
+                <div class="tech-card">
+                    <div class="tech-card-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Technologies</h3>
+                    </div>
+                    <div class="tech-card-content">
+                        <ul class="tech-list">
+                            <li><span class="tech-dot"></span>Android Studio</li>
+                            <li><span class="tech-dot"></span>Git & GitHub</li>
+                            <li><span class="tech-dot"></span>Postman</li>
+                            <li><span class="tech-dot"></span>Figma (UI/UX)</li>
+                            <li><span class="tech-dot"></span>Firebase Console</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
-          <div class="pricing-card" style="text-align:left">
-            <strong>Android</strong>
-            <div style="color:var(--muted);margin-top:8px">Kotlin · Jetpack Compose · MVVM · Room · Jetpack libraries</div>
-          </div>
-          <div class="pricing-card" style="text-align:left">
-            <strong>Backend & APIs</strong>
-            <div style="color:var(--muted);margin-top:8px">Firebase Auth · Firestore · REST · Retrofit · FCM</div>
-          </div>
-          <div class="pricing-card" style="text-align:left">
-            <strong>Tools</strong>
-            <div style="color:var(--muted);margin-top:8px">Android Studio · GitHub · Postman · Figma</div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- portfolio -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="section-header">
-          <h2>Selected Projects</h2>
-          <p style="color:var(--muted)">Real projects I shipped — click to view case study or live demo.</p>
-        </div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
-          <div class="service" onclick="window.open('https://shivamkumarptu.github.io/GymSaathi-Landing-Page/','_blank')" style="cursor:pointer">
-            <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
-              <div class="icon"><i class="fas fa-dumbbell"></i></div>
-              <div>
-                <h3 style="margin:0">GymSaathi App</h3>
-                <div style="color:var(--muted);font-size:0.95rem">Fitness app — Auth, biometric, tracking & analytics.</div>
-              </div>
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio</h2>
+                <p>Showcasing my recent projects and case studies</p>
             </div>
-          </div>
 
-          <div class="service" onclick="window.open('https://shivamkumarptu.github.io/Full-Screen-TImer-Landing-Page/','_blank')" style="cursor:pointer">
-            <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
-              <div class="icon"><i class="fas fa-clock"></i></div>
-              <div>
-                <h3 style="margin:0">Full Screen Timer</h3>
-                <div style="color:var(--muted);font-size:0.95rem">Distraction-free timer with multiple modes & persistence.</div>
-              </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card" onclick="window.open('https://shivamkumarptu.github.io/GymSaathi-Landing-Page/', '_blank')">
+                    <div class="portfolio-image">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>GymSaathi App</h3>
+                        <p>Fitness app with Firebase authentication & biometric login, workout tracking, and progress analytics.</p>
+                        <div class="portfolio-tech">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Room DB</span>
+                            <span class="project-tag">Jetpack Compose</span>
+                        </div>
+                        <a href="https://shivamkumarptu.github.io/GymSaathi-Landing-Page/" class="portfolio-cta" target="_blank">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" onclick="window.open('https://shivamkumarptu.github.io/Full-Screen-TImer-Landing-Page/', '_blank')">
+                    <div class="portfolio-image">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Full Screen Timer App</h3>
+                        <p>Full-screen timer app with multiple modes, custom intervals, and a distraction-free interface.</p>
+                        <div class="portfolio-tech">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Room DB</span>
+                            <span class="project-tag">WorkManager</span>
+                            <span class="project-tag">Material Design</span>
+                        </div>
+                        <a href="https://shivamkumarptu.github.io/Full-Screen-TImer-Landing-Page/" class="portfolio-cta" target="_blank">View Details →</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <div style="text-align:center;margin-top:20px">
-          <a class="btn" href="#contact">Discuss Project — Request Quote</a>
+            <div id="moreProjectsContainer" style="display:none;margin-top:30px">
+                <div class="portfolio-grid">
+                    <div id="noMoreProjects" style="text-align:center;padding:40px;color:var(--muted);font-size:1.1rem">
+                        No more projects available at this moment
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more">
+                <button id="moreProjectsBtn" class="btn btn-secondary">More Projects →</button>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- testimonials & trust -->
+    <!-- Testimonials Section -->
     <section class="testimonials">
-      <div class="container">
-        <div class="section-header"><h2>What clients say</h2></div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
-          <div class="service">
-            <p style="font-style:italic;color:var(--muted)">"Delivered exactly what we needed on time — excellent communication throughout."</p>
-            <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
-              <div style="width:44px;height:44px;border-radius:10px;background:var(--cyan);color:#fff;display:grid;place-items:center">RM</div>
-              <div>
-                <strong>Rahul Mehta</strong><div style="color:var(--muted);font-size:0.9rem">Founder, FitStart</div>
-              </div>
+        <div class="container">
+            <div class="section-header">
+                <h2>Testimonials</h2>
+                <p>What my clients say about working with me</p>
             </div>
-          </div>
 
-          <div class="service">
-            <p style="font-style:italic;color:var(--muted)">"Smooth Firebase integration and fast fixes. Highly recommended."</p>
-            <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
-              <div style="width:44px;height:44px;border-radius:10px;background:var(--cyan);color:#fff;display:grid;place-items:center">AS</div>
-              <div>
-                <strong>Ananya Sharma</strong><div style="color:var(--muted);font-size:0.9rem">Product Manager</div>
-              </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Working with Shivam was effortless — he understood our needs instantly and delivered a flawless app before deadline."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RM</div>
+                        <div class="author-info">
+                            <h4>Rahul Mehta</h4>
+                            <p>Founder, FitStart</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Highly communicative and reliable developer. Our Firebase integration was smooth and fast."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-info">
+                            <h4>Ananya Sharma</h4>
+                            <p>Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Shivam's attention to detail and clean code made our app maintenance so much easier. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">VP</div>
+                        <div class="author-info">
+                            <h4>Vikram Patel</h4>
+                            <p>CTO, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
-
     <!-- FAQ -->
     <section id="faq">
       <div class="container">
@@ -485,6 +632,24 @@
           submitBtn.disabled = false;
         });
     });
+
+    // More Projects button functionality
+    const moreProjectsBtn = document.getElementById('moreProjectsBtn');
+    const moreProjectsContainer = document.getElementById('moreProjectsContainer');
+    
+    if(moreProjectsBtn){
+      moreProjectsBtn.addEventListener('click', function(){
+        const noMoreProjects = document.getElementById('noMoreProjects');
+        if(moreProjectsContainer.style.display === 'none'){
+          moreProjectsContainer.style.display = 'block';
+          moreProjectsBtn.textContent = 'Hide Projects ↑';
+          moreProjectsBtn.style.marginTop = '0';
+        } else {
+          moreProjectsContainer.style.display = 'none';
+          moreProjectsBtn.textContent = 'More Projects →';
+        }
+      });
+    }
 
     // Console greeting
     console.log('Shivam Kumar — Freelance Android Developer — Ready to build apps 🚀');
