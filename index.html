@@ -84,7 +84,58 @@
     footer{background:var(--navy);color:#fff;padding:40px 0;border-top:4px solid rgba(255,255,255,0.03)}
     .footer-grid{display:flex;gap:40px;flex-wrap:wrap;justify-content:space-between}
     .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.06);margin-right:8px;color:#fff}
-    
+       .availability-bar {
+        position: relative;
+        border-top: 1px solid rgba(0, 173, 181, 0.08);
+        border-bottom: 1px solid rgba(0, 173, 181, 0.08);
+        margin: 0;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+      }
+      
+      .availability-bar:hover .availability-track {
+        animation-play-state: paused;
+      }
+      
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-33.33%);
+        }
+      }
+      
+      .platform a {
+        transition: all 0.2s ease;
+        padding: 6px 12px;
+        border-radius: 8px;
+      }
+      
+      .platform a:hover {
+        background: rgba(0, 173, 181, 0.06);
+        color: var(--cyan);
+        transform: translateY(-1px);
+      }
+      
+      /* Responsive adjustments */
+      @media (max-width: 720px) {
+        .availability-track {
+          animation: scroll 25s linear infinite !important;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .availability-track {
+          animation: scroll 20s linear infinite !important;
+        }
+        .platform {
+          padding: 0 14px !important;
+        }
+        .platform a {
+          margin: 0 8px !important;
+          font-size: 0.9rem;
+        }
+      }
     /* Service Cards Styles */
     .services{background:var(--off-white)}
     .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
@@ -212,7 +263,252 @@
         </div>
       </div>
     </section>
+        <!-- Availability Bar -->
+    <section class="availability-bar" style="background: var(--card); padding: 18px 0; overflow: hidden; position: relative;">
+      <div class="container" style="position: relative; overflow: hidden;">
+        <div class="availability-track" style="display: flex; width: max-content; animation: scroll 5s linear infinite;">
+          <!-- First set of platforms -->
+          <div class="platform" style="display: flex; align-items: center; padding: 0 28px; white-space: nowrap;">
+            <span style="color: var(--muted); margin-right: 8px;">Available on:</span>
+            <a href="https://www.upwork.com/freelancers/~01a7f6e1e8c8b0b3c9" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-fonticons-fi" style="color: #14a800;"></i> Upwork
+            </a>
+            <a href="https://www.fiverr.com/shivamkumar_android" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-fonticons" style="color: #1dbf73;"></i> Fiverr
+            </a>
+            <a href="https://www.freelancer.in/u/shivamkumarptu" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fas fa-briefcase" style="color: #29b2fe;"></i> Freelancer
+            </a>
+            <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-linkedin" style="color: #0a66c2;"></i> LinkedIn
+            </a>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="platform" style="display: flex; align-items: center; padding: 0 28px; white-space: nowrap;">
+            <span style="color: var(--muted); margin-right: 8px;">Available on:</span>
+            <a href="https://www.upwork.com/freelancers/~01a7f6e1e8c8b0b3c9" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-fonticons-fi" style="color: #14a800;"></i> Upwork
+            </a>
+            <a href="https://www.fiverr.com/shivamkumar_android" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-fonticons" style="color: #1dbf73;"></i> Fiverr
+            </a>
+            <a href="https://www.freelancer.in/u/shivamkumarptu" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fas fa-briefcase" style="color: #29b2fe;"></i> Freelancer
+            </a>
+            <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-linkedin" style="color: #0a66c2;"></i> LinkedIn
+            </a>
+          </div>
+          <!-- Add a third copy to ensure seamless transition -->
+          <div class="platform" style="display: flex; align-items: center; padding: 0 28px; white-space: nowrap;">
+            <span style="color: var(--muted); margin-right: 8px;">Available on:</span>
+            <a href="https://www.upwork.com/freelancers/~01941cb77c15cea6ac?mp_source=share" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-fonticons-fi" style="color: #14a800;"></i> Upwork
+            </a>
+            <a href="https://www.fiverr.com/shivamkumar_android" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-fonticons" style="color: #1dbf73;"></i> Fiverr
+            </a>
+            <a href="https://www.freelancer.in/u/AndroidShivam" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fas fa-briefcase" style="color: #29b2fe;"></i> Freelancer
+            </a>
+            <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-linkedin" style="color: #0a66c2;"></i> LinkedIn
+            </a>
+             <a href="https://www.facebook.com/shivamkumarptu" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-facebook" style="color: #0a66c2;"></i> Facebook
+            </a>
+             <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-twitter"></i>" style="color: #0a66c2;"></i> Twitter
+            </a>
+             <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-upwork" style="color: #0a66c2;"></i> Upwork
+            </a>
+             <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-Naukri" style="color: #0a66c2;"></i> Naukri
+            </a>
+             <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-Glassdoor" style="color: #0a66c2;"></i> Glassdoor
+            </a>
+             <a href="https://www.linkedin.com/in/shivam-kumar-1b1611210/" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+              <i class="fab fa-Indeed Jobs" style="color: #0a66c2;"></i> Indeed Jobs
+            </a>
+          </div>
+        </div>
+        
+        <!-- Gradient overlays for smooth edges -->
+        <div style="position: absolute; top: 0; left: 0; width: 60px; height: 100%; background: linear-gradient(to right, var(--card), transparent); pointer-events: none; z-index: 2;"></div>
+        <div style="position: absolute; top: 0; right: 0; width: 60px; height: 100%; background: linear-gradient(to left, var(--card), transparent); pointer-events: none; z-index: 2;"></div>
+      </div>
+    </section>
 
+    
+       
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio</h2>
+                <p>Showcasing my recent projects and case studies</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card" onclick="window.open('https://shivamkumarptu.github.io/GymSaathi-Landing-Page/', '_blank')">
+                    <div class="portfolio-image">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>GymSaathi App</h3>
+                        <p>Fitness app with Firebase authentication & biometric login, workout tracking, and progress analytics.</p>
+                        <div class="portfolio-tech">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Room DB</span>
+                            <span class="project-tag">Jetpack Compose</span>
+                        </div>
+                        <a href="https://shivamkumarptu.github.io/GymSaathi-Landing-Page/" class="portfolio-cta" target="_blank">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" onclick="window.open('https://github.com/ShivamKumarPTU/Full_Screen_Timer', '_blank')">
+                    <div class="portfolio-image">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Full Screen Timer App</h3>
+                        <p>Full-screen timer app with multiple modes, custom intervals, and a distraction-free interface.</p>
+                        <div class="portfolio-tech">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Room DB</span>
+                            <span class="project-tag">WorkManager</span>
+                            <span class="project-tag">Material Design</span>
+                        </div>
+                        <a href="https://github.com/ShivamKumarPTU/Full_Screen_Timer" class="portfolio-cta" target="_blank">View Details →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="moreProjectsContainer" style="display:none;margin-top:30px">
+                <div class="portfolio-grid">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-radar" style="font-size: 34px; color: white;"></i>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Smart Radar System</h3>
+                            <p>An Arduino-based radar system that detects and visualizes objects in its surroundings using ultrasonic sensors. Real-time object detection with 180-degree scanning range.</p>
+                            <div class="portfolio-tech">
+                                <span class="project-tag">Arduino</span>
+                                <span class="project-tag">C++</span>
+                                <span class="project-tag">Processing</span>
+                                <span class="project-tag">Sensors</span>
+                            </div>
+                            <div style="margin-top: 12px;">
+                                <strong>Key Features:</strong>
+                                <ul style="color: var(--muted); margin-top: 8px; padding-left: 20px; font-size: 0.9rem;">
+                                    <li>Real-time object detection</li>
+                                    <li>180-degree scanning range</li>
+                                    <li>Visual data representation</li>
+                                    <li>Distance measurement</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more">
+                <button id="moreProjectsBtn" class="btn btn-secondary">More Projects →</button>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Portfolio Section 
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio</h2>
+                <p>Showcasing my recent projects and case studies</p>
+            </div>
+
+            <div class="portfolio-grid">
+               
+                <div class="portfolio-card" onclick="window.open('https://shivamkumarptu.github.io/GymSaathi-Landing-Page/', '_blank')">
+                    <div class="portfolio-image" style="padding: 0; overflow: hidden;">
+                        <img src="ThumnailGymSatthi.jpg" 
+                             alt="GymSaathi App Screenshot" 
+                             style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>GymSaathi App</h3>
+                        <p>Fitness app with Firebase authentication & biometric login, workout tracking, and progress analytics.</p>
+                        <div class="portfolio-tech">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Room DB</span>
+                            <span class="project-tag">Jetpack Compose</span>
+                        </div>
+                        <a href="https://shivamkumarptu.github.io/GymSaathi-Landing-Page/" class="portfolio-cta" target="_blank">View Details →</a>
+                    </div>
+                </div>
+
+              
+                <div class="portfolio-card" onclick="window.open('https://github.com/ShivamKumarPTU/Full_Screen_Timer', '_blank')">
+                    <div class="portfolio-image" style="padding: 0; overflow: hidden;">
+                        <img src="THumbnailForBusinessSite.png" 
+                             alt="Full Screen Timer App Screenshot" 
+                             style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Full Screen Timer App</h3>
+                        <p>Full-screen timer app with multiple modes, custom intervals, and a distraction-free interface.</p>
+                        <div class="portfolio-tech">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Room DB</span>
+                            <span class="project-tag">WorkManager</span>
+                            <span class="project-tag">Material Design</span>
+                        </div>
+                        <a href="https://github.com/ShivamKumarPTU/Full_Screen_Timer" class="portfolio-cta" target="_blank">View Details →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="moreProjectsContainer" style="display:none;margin-top:30px">
+                <div class="portfolio-grid">
+                  
+                    <div class="portfolio-card">
+                        <div class="portfolio-image" style="padding: 0; overflow: hidden;">
+                            <img src="radar1.jpg" 
+                                 alt="Smart Radar System Project" 
+                                 style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Smart Radar System</h3>
+                            <p>An Arduino-based radar system that detects and visualizes objects in its surroundings using ultrasonic sensors. Real-time object detection with 180-degree scanning range.</p>
+                            <div class="portfolio-tech">
+                                <span class="project-tag">Arduino</span>
+                                <span class="project-tag">C++</span>
+                                <span class="project-tag">Processing</span>
+                                <span class="project-tag">Sensors</span>
+                            </div>
+                            <div style="margin-top: 12px;">
+                                <strong>Key Features:</strong>
+                                <ul style="color: var(--muted); margin-top: 8px; padding-left: 20px; font-size: 0.9rem;">
+                                    <li>Real-time object detection</li>
+                                    <li>180-degree scanning range</li>
+                                    <li>Visual data representation</li>
+                                    <li>Distance measurement</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more">
+                <button id="moreProjectsBtn" class="btn btn-secondary">More Projects →</button>
+            </div>
+        </div>
+    </section>
+  -->
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
@@ -224,8 +520,8 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
+                              <i class="fas fa-mobile-alt"></i>
+                          </div>
                     <div class="service-content">
                         <h3>Custom Android App Development</h3>
                         <p>Full-cycle Android app development using Kotlin and Firebase with fast UI and scalable backend.</p>
@@ -333,64 +629,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>Portfolio</h2>
-                <p>Showcasing my recent projects and case studies</p>
-            </div>
-
-            <div class="portfolio-grid">
-                <div class="portfolio-card" onclick="window.open('https://shivamkumarptu.github.io/GymSaathi-Landing-Page/', '_blank')">
-                    <div class="portfolio-image">
-                        <i class="fas fa-dumbbell"></i>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>GymSaathi App</h3>
-                        <p>Fitness app with Firebase authentication & biometric login, workout tracking, and progress analytics.</p>
-                        <div class="portfolio-tech">
-                            <span class="project-tag">Kotlin</span>
-                            <span class="project-tag">Firebase</span>
-                            <span class="project-tag">Room DB</span>
-                            <span class="project-tag">Jetpack Compose</span>
-                        </div>
-                        <a href="https://shivamkumarptu.github.io/GymSaathi-Landing-Page/" class="portfolio-cta" target="_blank">View Details →</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-card" onclick="window.open('https://github.com/ShivamKumarPTU/Full_Screen_Timer', '_blank')">
-                    <div class="portfolio-image">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Full Screen Timer App</h3>
-                        <p>Full-screen timer app with multiple modes, custom intervals, and a distraction-free interface.</p>
-                        <div class="portfolio-tech">
-                            <span class="project-tag">Kotlin</span>
-                            <span class="project-tag">Room DB</span>
-                            <span class="project-tag">WorkManager</span>
-                            <span class="project-tag">Material Design</span>
-                        </div>
-                        <a href="https://github.com/ShivamKumarPTU/Full_Screen_Timer" class="portfolio-cta" target="_blank">View Details →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="moreProjectsContainer" style="display:none;margin-top:30px">
-                <div class="portfolio-grid">
-                    <div id="noMoreProjects" style="text-align:center;padding:40px;color:var(--muted);font-size:1.1rem">
-                        No more projects available at this moment
-                    </div>
-                </div>
-            </div>
-
-            <div class="view-more">
-                <button id="moreProjectsBtn" class="btn btn-secondary">More Projects →</button>
             </div>
         </div>
     </section>
