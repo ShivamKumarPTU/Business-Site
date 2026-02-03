@@ -28,70 +28,11 @@ I help startups, businesses, and individuals turn their ideas into production-re
 
 ## 📱 Portfolio Projects
 
-### 🔹 GeoFence Tracker App
-**Child Safety & Location Monitoring App**
+| 🚀 Project | 📱 Description |
+|-----------|----------------|
+| **GeoFence Tracker App**<br/>*Child Safety & Location Monitoring App*<br/><br/>• Tracks user location using geofencing<br/>• Sends alerts when entering/exiting predefined areas<br/>• Uses Google Maps & background services<br/><br/>**Tech Stack:** Kotlin, Google Maps API, Geofencing API, Room Database, Foreground Services<br/><br/>🔗 https://github.com/ShivamKumarPTU/GeoFence-Tracker | **Full Screen Timer App**<br/>*Distraction-free productivity timer*<br/><br/>• Full-screen timer experience<br/>• Multiple modes and custom intervals<br/>• Minimal UI focused on productivity<br/><br/>**Tech Stack:** Kotlin, Room Database, WorkManager, Material Design<br/><br/>🔗 https://github.com/ShivamKumarPTU/Full_Screen_Timer |
+| **Smart Radar System (Class Project)**<br/>*Arduino-based Radar Visualization System*<br/><br/>• Detects objects using ultrasonic sensors<br/>• Real-time distance visualization<br/>• 180° scanning mechanism<br/><br/>**Tech Stack:** Arduino, Embedded C / C++, Ultrasonic Sensors, Processing | **GymSaathi App**<br/>*Fitness Tracking Android App*<br/><br/>• Firebase authentication & biometric login<br/>• Workout tracking & progress analytics<br/>• Clean and modern UI<br/><br/>**Tech Stack:** Kotlin, Firebase, Room Database, Jetpack Compose<br/><br/>🔗 https://shivamkumarptu.github.io/GymSaathi-Landing-Page/ |
 
-- Tracks user location using geofencing
-- Sends alerts when entering or exiting predefined areas
-- Uses Google Maps & background services
-
-**Tech Stack**
-- Kotlin  
-- Google Maps API  
-- Geofencing API  
-- Room Database  
-- Foreground Services  
-
-🔗 GitHub: https://github.com/ShivamKumarPTU/GeoFence-Tracker
-
----
-
-### 🔹 Full Screen Timer App
-**Distraction-free productivity timer**
-
-- Full-screen timer experience
-- Multiple modes and custom intervals
-- Minimal UI focused on productivity
-
-**Tech Stack**
-- Kotlin  
-- Room Database  
-- WorkManager  
-- Material Design  
-
-🔗 GitHub: https://github.com/ShivamKumarPTU/Full_Screen_Timer
-
----
-
-### 🔹 Smart Radar System (Class Project)
-**Arduino-based Radar Visualization System**
-
-- Detects objects using ultrasonic sensors
-- Real-time distance visualization
-- 180° scanning mechanism
-
-**Tech Stack**
-- Arduino  
-- Embedded C / C++  
-- Ultrasonic Sensors  
-- Processing  
-
----
-
-### 🔹 GymSaathi App
-**Fitness Tracking Android App**
-
-- Firebase authentication & biometric login
-- Workout tracking & progress analytics
-- Clean and modern UI
-
-**Tech Stack**
-- Kotlin  
-- Firebase  
-- Room Database  
-- Jetpack Compose  
-
-🔗 Live Page: https://shivamkumarptu.github.io/GymSaathi-Landing-Page/
 
 ---
 
@@ -106,26 +47,14 @@ I help startups, businesses, and individuals turn their ideas into production-re
 
 ## ⚙️ Technologies I Work With
 
-### Android Development
-- Kotlin, Java  
-- Jetpack Compose  
-- MVVM Architecture  
-- Room Database  
-- Jetpack Libraries  
+| 📱 Android Development | ☁️ Backend & APIs |
+|-----------------------|------------------|
+| Kotlin, Java<br/>Jetpack Compose<br/>MVVM Architecture<br/>Room Database<br/>Jetpack Libraries | REST APIs<br/>Retrofit<br/>Firebase Authentication<br/>Firestore / Realtime Database<br/>Firebase Cloud Messaging (FCM) |
 
-### Backend & APIs
-- REST APIs  
-- Retrofit  
-- Firebase Authentication  
-- Firestore / Realtime Database  
-- Firebase Cloud Messaging (FCM)  
+| 🛠 Tools & Platforms | 🎨 UI / UX |
+|--------------------|-----------|
+| Android Studio<br/>Git & GitHub<br/>Postman | Figma<br/>Material Design<br/>Clean UI |
 
-### Tools & Platforms
-- Android Studio  
-- Git & GitHub  
-- Postman  
-- Figma  
-- Firebase Console  
 
 ## 📩 Contact Me
 
