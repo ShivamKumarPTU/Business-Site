@@ -305,7 +305,7 @@
             <a href="https://www.upwork.com/freelancers/~01941cb77c15cea6ac?mp_source=share" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
               <i class="fab fa-fonticons-fi" style="color: #14a800;"></i> Upwork
             </a>
-            <a href="https://www.fiverr.com/shivamkumar_android" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
+            <a href="https://www.fiverr.com/users/shivamrana3_/portfolio" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
               <i class="fab fa-fonticons" style="color: #1dbf73;"></i> Fiverr
             </a>
             <a href="https://www.freelancer.in/u/AndroidShivam" target="_blank" style="margin: 0 14px; font-weight: 600; color: var(--navy); text-decoration: none; display: flex; align-items: center; gap: 6px;">
@@ -351,20 +351,21 @@
             </div>
 
             <div class="portfolio-grid">
-                <div class="portfolio-card" onclick="window.open('https://shivamkumarptu.github.io/GymSaathi-Landing-Page/', '_blank')">
+              <div class ="portfolio-card" onclick="window.open('https://github.com/ShivamKumarPTU/GeoFence-Tracker', '_blank')">
                     <div class="portfolio-image">
-                        <i class="fas fa-dumbbell"></i>
+                        <i class="fas fa-map-marked-alt"></i>
                     </div>
                     <div class="portfolio-content">
-                        <h3>GymSaathi App</h3>
-                        <p>Fitness app with Firebase authentication & biometric login, workout tracking, and progress analytics.</p>
+                        <h3>GeoFence Tracker App</h3>
+                        <p>Android app that tracks user location and sends notifications upon entering/exiting predefined geofences using Google Maps API.</p>
                         <div class="portfolio-tech">
                             <span class="project-tag">Kotlin</span>
-                            <span class="project-tag">Firebase</span>
-                            <span class="project-tag">Room DB</span>
-                            <span class="project-tag">Jetpack Compose</span>
+                            <span class="project-tag">Google Maps API</span>
+                            <span class="project-tag">Geofencing</span>
+                            <span class="project-tag">Room Database</span>
+                            <span class="project-tag">Foreground Service</span>
                         </div>
-                        <a href="https://shivamkumarptu.github.io/GymSaathi-Landing-Page/" class="portfolio-cta" target="_blank">View Details →</a>
+                        <a href="https://github.com/ShivamKumarPTU/GeoFence-Tracker" class="portfolio-cta" target="_blank">View Details →</a>
                     </div>
                 </div>
 
@@ -386,34 +387,71 @@
                 </div>
             </div>
 
-            <div id="moreProjectsContainer" style="display:none;margin-top:30px">
-                <div class="portfolio-grid">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-radar" style="font-size: 34px; color: white;"></i>
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Smart Radar System</h3>
-                            <p>An Arduino-based radar system that detects and visualizes objects in its surroundings using ultrasonic sensors. Real-time object detection with 180-degree scanning range.</p>
-                            <div class="portfolio-tech">
-                                <span class="project-tag">Arduino</span>
-                                <span class="project-tag">C++</span>
-                                <span class="project-tag">Processing</span>
-                                <span class="project-tag">Sensors</span>
-                            </div>
-                            <div style="margin-top: 12px;">
-                                <strong>Key Features:</strong>
-                                <ul style="color: var(--muted); margin-top: 8px; padding-left: 20px; font-size: 0.9rem;">
-                                    <li>Real-time object detection</li>
-                                    <li>180-degree scanning range</li>
-                                    <li>Visual data representation</li>
-                                    <li>Distance measurement</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <div id="moreProjectsContainer" style="display:none;margin-top:30px">
+  <div class="portfolio-grid">
+
+    <div class="portfolio-card">
+
+  <!-- Radar Image -->
+  <div class="portfolio-image"
+       style="background:#0f172a; padding:12px; display:flex; align-items:center; justify-content:center;">
+    <img src="radar1.jpg"
+         alt="Radar System Project"
+         style="
+           max-width:100%;
+           max-height:100%;
+           object-fit:contain;
+           display:block;
+         ">
+  </div>
+
+  <!-- Content -->
+  <div class="portfolio-content">
+    <h3>Smart Radar System</h3>
+    <p>
+      Arduino-based radar system using ultrasonic sensors to detect objects
+      and visualize distance in real time across a 180° scanning range.
+    </p>
+
+    <div class="portfolio-tech">
+      <span class="project-tag">Arduino</span>
+      <span class="project-tag">Ultrasonic Sensor</span>
+      <span class="project-tag">Embedded C</span>
+      <span class="project-tag">Processing</span>
+    </div>
+  </div>
+
+</div>
+
+
+    <!-- GymSaathi App -->
+    <div class="portfolio-card"
+         onclick="window.open('https://shivamkumarptu.github.io/GymSaathi-Landing-Page/', '_blank')">
+      <div class="portfolio-image">
+        <i class="fas fa-dumbbell"></i>
+      </div>
+      <div class="portfolio-content">
+        <h3>GymSaathi App</h3>
+        <p>
+          Fitness app with Firebase authentication & biometric login,
+          workout tracking, and progress analytics.
+        </p>
+        <div class="portfolio-tech">
+          <span class="project-tag">Kotlin</span>
+          <span class="project-tag">Firebase</span>
+          <span class="project-tag">Room DB</span>
+          <span class="project-tag">Jetpack Compose</span>
+        </div>
+        <a href="https://shivamkumarptu.github.io/GymSaathi-Landing-Page/"
+           class="portfolio-cta" target="_blank">
+          View Details →
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
             <div class="view-more">
                 <button id="moreProjectsBtn" class="btn btn-secondary">More Projects →</button>
@@ -421,94 +459,6 @@
         </div>
     </section>
   
-    <!-- Portfolio Section 
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>Portfolio</h2>
-                <p>Showcasing my recent projects and case studies</p>
-            </div>
-
-            <div class="portfolio-grid">
-               
-                <div class="portfolio-card" onclick="window.open('https://shivamkumarptu.github.io/GymSaathi-Landing-Page/', '_blank')">
-                    <div class="portfolio-image" style="padding: 0; overflow: hidden;">
-                        <img src="ThumnailGymSatthi.jpg" 
-                             alt="GymSaathi App Screenshot" 
-                             style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>GymSaathi App</h3>
-                        <p>Fitness app with Firebase authentication & biometric login, workout tracking, and progress analytics.</p>
-                        <div class="portfolio-tech">
-                            <span class="project-tag">Kotlin</span>
-                            <span class="project-tag">Firebase</span>
-                            <span class="project-tag">Room DB</span>
-                            <span class="project-tag">Jetpack Compose</span>
-                        </div>
-                        <a href="https://shivamkumarptu.github.io/GymSaathi-Landing-Page/" class="portfolio-cta" target="_blank">View Details →</a>
-                    </div>
-                </div>
-
-              
-                <div class="portfolio-card" onclick="window.open('https://github.com/ShivamKumarPTU/Full_Screen_Timer', '_blank')">
-                    <div class="portfolio-image" style="padding: 0; overflow: hidden;">
-                        <img src="THumbnailForBusinessSite.png" 
-                             alt="Full Screen Timer App Screenshot" 
-                             style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Full Screen Timer App</h3>
-                        <p>Full-screen timer app with multiple modes, custom intervals, and a distraction-free interface.</p>
-                        <div class="portfolio-tech">
-                            <span class="project-tag">Kotlin</span>
-                            <span class="project-tag">Room DB</span>
-                            <span class="project-tag">WorkManager</span>
-                            <span class="project-tag">Material Design</span>
-                        </div>
-                        <a href="https://github.com/ShivamKumarPTU/Full_Screen_Timer" class="portfolio-cta" target="_blank">View Details →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="moreProjectsContainer" style="display:none;margin-top:30px">
-                <div class="portfolio-grid">
-                  
-                    <div class="portfolio-card">
-                        <div class="portfolio-image" style="padding: 0; overflow: hidden;">
-                            <img src="radar1.jpg" 
-                                 alt="Smart Radar System Project" 
-                                 style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                        </div>
-                        <div class="portfolio-content">
-                            <h3>Smart Radar System</h3>
-                            <p>An Arduino-based radar system that detects and visualizes objects in its surroundings using ultrasonic sensors. Real-time object detection with 180-degree scanning range.</p>
-                            <div class="portfolio-tech">
-                                <span class="project-tag">Arduino</span>
-                                <span class="project-tag">C++</span>
-                                <span class="project-tag">Processing</span>
-                                <span class="project-tag">Sensors</span>
-                            </div>
-                            <div style="margin-top: 12px;">
-                                <strong>Key Features:</strong>
-                                <ul style="color: var(--muted); margin-top: 8px; padding-left: 20px; font-size: 0.9rem;">
-                                    <li>Real-time object detection</li>
-                                    <li>180-degree scanning range</li>
-                                    <li>Visual data representation</li>
-                                    <li>Distance measurement</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="view-more">
-                <button id="moreProjectsBtn" class="btn btn-secondary">More Projects →</button>
-            </div>
-        </div>
-    </section>
-  -->
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
