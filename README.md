@@ -44,16 +44,16 @@ I help startups, businesses, and individuals turn their ideas into production-re
 - 🎨 UI/UX to App Conversion  
 
 ---
-
 ## ⚙️ Technologies I Work With
 
 | 📱 Android Development | ☁️ Backend & APIs |
-|-----------------------|------------------|
-| Kotlin, Java<br/>Jetpack Compose<br/>MVVM Architecture<br/>Room Database<br/>Jetpack Libraries | REST APIs<br/>Retrofit<br/>Firebase Authentication<br/>Firestore / Realtime Database<br/>Firebase Cloud Messaging (FCM) |
+| :-------------------: | :--------------: |
+| Kotlin<br/>Java<br/>Jetpack Compose<br/>MVVM Architecture<br/>Room Database<br/>Jetpack Libraries | REST APIs<br/>Retrofit<br/>Firebase Authentication<br/>Firestore / Realtime Database<br/>Firebase Cloud Messaging (FCM) |
 
 | 🛠 Tools & Platforms | 🎨 UI / UX |
-|--------------------|-----------|
+| :-----------------: | :-------: |
 | Android Studio<br/>Git & GitHub<br/>Postman | Figma<br/>Material Design<br/>Clean UI |
+
 
 
 ## 📩 Contact Me
